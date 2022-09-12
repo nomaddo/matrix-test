@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   files:
-    runs-on: python:3.8
+    runs-on: ubuntu-latest
     outputs:
       files: ${{ steps.gathering.outputs.files }}
     steps:
