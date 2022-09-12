@@ -25,6 +25,7 @@ jobs:
           sudo apt update && sudo apt install -y jq
       - id: gathering
         run: |
+          find -name '*.txt' | jq -R . | jq -s .
           echo '::set-output name=files::$(find -name '*.txt' | jq -R . | jq -s .)'
   cat:
     runs-on: ubuntu-latest
