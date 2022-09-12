@@ -34,5 +34,6 @@ jobs:
       matrix:
         file: ${{ fromJson(needs.files.outputs.files) }}
     steps:
+      - uses: actions/checkout@v3
       - name: cat
         run: cat ${{ matrix.file }}
